@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PROBABILITY MATH · Media Belajar Peluang Kelas XI</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--b:#2f5bff;--p:#4c1d95;--l:#c4b5fd;--k:#f9a8d4;--y:#fde047;--ink:#2a1a6e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins','Segoe UI',system-ui,sans-serif;color:var(--ink);background:#3b2a9a;overflow-x:hidden}
+#top{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:9;height:34px;display:flex;align-items:center;gap:10px;padding:0 14px;font-size:.75rem;font-weight:800;color:#fff;background:rgba(40,20,120,.55);backdrop-filter:blur(10px)}
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:rgba(40,20,120,.55);backdrop-filter:blur(10px);z-index:8}
+#bar{flex:1;height:9px;border-radius:9px;background:rgba(255,255,255,.28);overflow:hidden}#pb{height:100%;width:6%;border-radius:9px;background:linear-gradient(90deg,var(--y),var(--k));transition:width .5s}
+.pg{display:none;position:relative;min-height:100vh;padding:56px 14px 120px}.pg.on{display:block;animation:in .5s}
+@keyframes in{from{opacity:0;transform:scale(.98)}}
+.bgl{position:absolute;inset:0;overflow:hidden;z-index:0}
+.bgl>*{position:absolute}
+.fl{animation:fl 6s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-16px) rotate(6deg)}}
+.in{position:relative;z-index:1;max-width:900px;margin:auto}
+h2{margin:0 0 12px;font-size:clamp(1.5rem,5.5vw,2.3rem);font-weight:800;color:var(--p)}
+.ttl{display:inline-block;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);border-radius:60px 60px 60px 18px;padding:10px 28px;box-shadow:0 10px 24px rgba(30,10,100,.35);margin-bottom:14px}
+.ttl h2{margin:0}.ttl h2 em{font-style:normal;color:var(--b)}
+.card{background:rgba(255,255,255,.82);backdrop-filter:blur(12px);border:2px solid rgba(255,255,255,.9);border-radius:24px;padding:16px 18px;box-shadow:0 12px 26px rgba(30,10,100,.3);margin-bottom:14px}
+.card h3{margin:0 0 6px;color:var(--b);font-size:1.05rem}.card p,.card ol,.card ul{margin:4px 0;font-size:.95rem}.card ol,.card ul{padding-left:20px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.two>.card{margin:0}
+.fm{background:linear-gradient(135deg,#fff,#ede9fe);border-radius:20px;padding:14px;text-align:center;font-weight:800;font-size:1.35rem;box-shadow:0 8px 0 var(--l),0 16px 24px rgba(30,10,100,.3)}
+.fm small{display:block;font-size:.78rem;font-weight:600;color:#6d28d9;margin-top:4px}
+.fr{display:inline-flex;flex-direction:column;text-align:center;vertical-align:middle;margin:0 5px;line-height:1.25}.fr i{font-style:normal;padding:0 7px}.fr i:first-child{border-bottom:2px solid currentColor}
+.btn{border:0;cursor:pointer;font:800 .95rem Poppins,sans-serif;color:#fff;background:linear-gradient(135deg,#6d28d9,#4c1d95);padding:12px 24px;border-radius:40px;box-shadow:0 5px 0 #2a1060,0 12px 20px rgba(0,0,0,.3);transition:.15s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #2a1060}.btn.y{background:linear-gradient(135deg,var(--y),#fb923c);color:var(--ink);box-shadow:0 5px 0 #b45309,0 12px 20px rgba(0,0,0,.3)}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}.chip{min-width:42px;height:42px;padding:0 6px;border-radius:13px;display:grid;place-items:center;font-weight:800;background:#ede9fe;border:2px solid var(--l)}.chip.on{background:linear-gradient(135deg,var(--y),#fb923c);border-color:#fff}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.mi{border:0;border-radius:24px;padding:18px;color:#fff;text-align:left;cursor:pointer;font-family:inherit;box-shadow:0 12px 24px rgba(10,5,60,.4);transition:.25s}.mi:hover{transform:translateY(-6px) rotate(-1deg)}
+.mi span{font-size:2.6rem;display:block;filter:drop-shadow(0 6px 4px rgba(0,0,0,.3))}.mi b{font-size:1.05rem}.mi small{display:block;opacity:.9}
+.m1{background:linear-gradient(135deg,#2f5bff,#7c3aed)}.m2{background:linear-gradient(135deg,#ec4899,#f9a8d4);color:#4a0d3c}.m3{background:linear-gradient(135deg,#8b5cf6,#2f5bff)}.m4{background:linear-gradient(135deg,#fde047,#fb923c);color:var(--ink)}.m5{background:linear-gradient(135deg,#14b8a6,#2f5bff)}.m6{background:linear-gradient(135deg,#a855f7,#ec4899)}.m7{background:linear-gradient(135deg,#ef4444,#f97316)}.m8{background:linear-gradient(135deg,#0ea5e9,#6366f1)}
+.cover{text-align:center;padding-top:10px}.cover h1{margin:6px 0;font-size:clamp(2.6rem,13vw,6rem);font-weight:800;line-height:1;color:#fff;text-shadow:0 6px 0 #2a1060,0 14px 24px rgba(0,0,0,.35)}
+.cover h1 em{font-style:normal;color:var(--y)}.tag{display:inline-block;background:var(--y);color:var(--ink);font-weight:800;font-size:.75rem;padding:5px 16px;border-radius:20px}
+.cover .card{display:inline-block;max-width:560px}
+#face{font-size:5rem;text-align:center;line-height:1}#coin{width:84px;height:84px;margin:auto;border-radius:50%;display:grid;place-items:center;font:800 2rem Poppins;background:radial-gradient(circle at 30% 30%,#fff7a8,#f59e0b);box-shadow:0 8px 0 #b45309}
+.bars{display:flex;gap:6px;align-items:flex-end;height:90px}.bars div{flex:1;text-align:center;font-size:.72rem;font-weight:800}.bars u{display:block;text-decoration:none;border-radius:7px 7px 0 0;background:linear-gradient(180deg,var(--k),var(--b));min-height:3px;transition:height .4s}
+.hud{display:flex;gap:8px;flex-wrap:wrap;font-weight:800;margin-bottom:8px}.hud span{background:#ede9fe;padding:5px 14px;border-radius:20px}
+.opt{display:block;width:100%;text-align:left;margin:9px 0;padding:13px 16px;border-radius:16px;border:2px solid var(--l);background:#fff;color:var(--ink);font:600 1rem Poppins,sans-serif;cursor:pointer;transition:.2s}.opt:hover{background:#ede9fe;transform:translateX(5px)}
+.big{font-size:clamp(1.8rem,7vw,3.2rem);font-weight:800;line-height:1.1;margin:0}.fbk{text-align:center}.fbk .ttl{padding:14px 30px}
+.ring{width:200px;height:200px;border-radius:50%;margin:8px auto;display:grid;place-items:center;background:conic-gradient(var(--y) calc(var(--v,0)*1%),#ddd6fe 0)}.ring div{width:152px;height:152px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:3rem;font-weight:800;color:var(--b)}
+[contenteditable]{background:#fef9c3;border-radius:8px;padding:2px 8px;outline:0}
+nav{position:fixed;bottom:0;left:0;right:0;z-index:9;display:flex;justify-content:center;gap:8px;padding:10px 10px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(40,20,120,.6);backdrop-filter:blur(12px)}nav .btn{padding:10px 18px;font-size:.85rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body>
+<div id="top"><span id="lab">Sampul</span><div id="bar"><div id="pb"></div></div><span id="pc"></span></div>
+
+<section class="pg on" id="cover" data-bg="0" data-ch="0"><div class="in cover">
+<span class="tag">MATEMATIKA · KELAS XI SMA/MA</span>
+<h1>PROBABILITY<br><em>MATH</em></h1>
+<div class="card"><b>Media Pembelajaran Matematika Interaktif</b><br>Materi PELUANG<br><small>Jelajahi Dunia Peluang, Pahami Matematika dengan Cara Menyenangkan!</small></div>
+<div class="row" style="justify-content:center"><button class="btn y" onclick="go('menu')">▶ MULAI BELAJAR</button></div></div></section>
+
+<section class="pg" id="menu" data-bg="1" data-ch="1"><div class="in">
+<div class="ttl"><h2>Menu <em>Utama</em></h2></div>
+<div class="menu">
+<button class="mi m1" onclick="go('petunjuk')"><span>🧭</span><b>Petunjuk & Tujuan</b><small>Cara pakai dan target belajar</small></button>
+<button class="mi m2" onclick="go('konsep')"><span>📘</span><b>Materi</b><small>Konsep, rumus, contoh</small></button>
+<button class="mi m3" onclick="go('simulasi')"><span>🎲</span><b>Simulasi</b><small>Lempar dadu dan koin</small></button>
+<button class="mi m7" onclick="go('video')"><span>▶️</span><b>Video</b><small>Tonton dan pahami</small></button><button class="mi m4" onclick="go('kuis');initQ(0)"><span>🎮</span><b>Latihan Soal</b><small>Kuis game 5 soal</small></button><button class="mi m8" onclick="go('kuis');initQ(1)"><span>📋</span><b>Evaluasi</b><small>5 soal akhir + skor</small></button>
+<button class="mi m5" onclick="go('rangkuman')"><span>📝</span><b>Rangkuman</b><small>Kartu rumus penting</small></button>
+<button class="mi m6" onclick="go('profil')"><span>👩‍🎓</span><b>Profil Pengembang</b><small>Identitas pembuat</small></button>
+</div></div></section>
+
+<section class="pg" id="petunjuk" data-bg="2" data-ch="0"><div class="in">
+<div class="ttl"><h2>Petunjuk & <em>Tujuan</em></h2></div>
+<div class="two"><div class="card"><h3>🧭 Cara Menggunakan</h3><ol><li>Klik MULAI BELAJAR</li><li>Pilih menu yang ingin dipelajari</li><li>Pelajari materi secara berurutan</li><li>Coba simulasi dan kerjakan latihan</li><li>Ikuti evaluasi di akhir</li><li>Gunakan tombol MENU untuk kembali</li></ol></div>
+<div class="card"><h3>🎯 Tujuan Pembelajaran</h3><ol><li>Memahami percobaan acak</li><li>Menentukan ruang sampel dan titik sampel</li><li>Menentukan peluang suatu kejadian</li><li>Menghitung frekuensi harapan</li><li>Memahami peluang kejadian majemuk</li><li>Menyelesaikan soal kontekstual</li></ol><small>Catatan: sesuaikan CP dengan kurikulum yang dipakai.</small></div></div></div></section>
+
+<section class="pg" id="konsep" data-bg="3" data-ch="1"><div class="in">
+<div class="ttl"><h2>Mengenal Dunia <em>Peluang</em></h2></div>
+<div class="two"><div class="card"><h3>🔁 Percobaan Acak</h3><p>Hasilnya tidak pasti, tetapi semua kemungkinan hasil dapat diketahui dan percobaan dapat diulang pada kondisi yang sama.</p><p>Contoh: melempar koin atau dadu, mengambil kartu, memilih bola dari kotak.</p></div>
+<div class="card"><h3>🧺 Ruang Sampel (S)</h3><p>Himpunan semua hasil yang mungkin. Setiap anggotanya disebut titik sampel.</p><p>Koin: S = {A, G}, n(S) = 2</p><div class="chips"><div class="chip">1</div><div class="chip on">2</div><div class="chip">3</div><div class="chip">4</div><div class="chip">5</div><div class="chip">6</div></div><p>Dadu: S = {1,2,3,4,5,6}; kejadian A (genap) = {2,4,6}, kuning di atas contoh.</p></div></div></div></section>
+
+<section class="pg" id="rumus" data-bg="4" data-ch="0"><div class="in">
+<div class="ttl"><h2>Peluang Suatu <em>Kejadian</em></h2></div>
+<div class="fm">P(A) = {n(A)/n(S)}<small>Rumus peluang kejadian A</small></div>
+<div class="two" style="margin-top:14px"><div class="card"><h3>Keterangan</h3><ul><li>P(A) = peluang kejadian A</li><li>n(A) = banyak titik sampel kejadian A</li><li>n(S) = banyak anggota ruang sampel</li></ul></div>
+<div class="card"><h3>Sifat Penting</h3><ul><li>0 ≤ P(A) ≤ 1</li><li>Kejadian pasti: P = 1; mustahil: P = 0</li><li>Komplemen: P(Aᶜ) = 1 − P(A)</li></ul></div></div></div></section>
+
+<section class="pg" id="contoh" data-bg="5" data-ch="1"><div class="in">
+<div class="ttl"><h2>Contoh <em>Soal</em></h2></div>
+<div class="card"><h3>🎲 Sebuah dadu dilempar satu kali. Tentukan peluang munculnya bilangan genap!</h3>
+<p>S = {1, 2, 3, 4, 5, 6} → n(S) = 6<br>A = {2, 4, 6} → n(A) = 3<br><b>P(A) = {3/6} = {1/2}</b></p></div>
+<div class="card"><h3>🃏 Dari 52 kartu bridge diambil satu. Peluang terambil As?</h3>
+<p>n(S) = 52, n(A) = 4 (ada 4 As)<br><b>P(As) = {4/52} = {1/13}</b></p></div></div></section>
+
+<section class="pg" id="fh" data-bg="6" data-ch="0"><div class="in">
+<div class="ttl"><h2>Frekuensi <em>Harapan</em></h2></div>
+<div class="fm">Fh(A) = P(A) × n<small>n = banyak percobaan</small></div>
+<div class="card" style="margin-top:14px"><h3>🎲 Contoh</h3><p>Sebuah dadu dilempar 60 kali. Berapa frekuensi harapan muncul bilangan genap?</p><p>P(genap) = {1/2} → Fh = {1/2} × 60 = <b>30 kali</b></p></div>
+<div class="card"><h3>🪙 Contoh</h3><p>Dua koin dilempar 40 kali. Fh muncul dua Gambar? S = {GG, GA, AG, AA}, P(GG) = {1/4} → Fh = {1/4} × 40 = <b>10 kali</b></p></div></div></section>
+
+<section class="pg" id="majemuk" data-bg="7" data-ch="1"><div class="in">
+<div class="ttl"><h2>Kejadian <em>Majemuk</em></h2></div>
+<div class="two"><div class="card"><h3>🔵🟣 Gabungan & Irisan</h3>
+<svg viewBox="0 0 220 110" width="100%" style="max-width:260px"><circle cx="85" cy="55" r="45" fill="#2f5bff" opacity=".55"/><circle cx="135" cy="55" r="45" fill="#ec4899" opacity=".55"/><text x="62" y="60" font-weight="800" fill="#fff">A</text><text x="148" y="60" font-weight="800" fill="#fff">B</text><text x="102" y="60" font-weight="800" fill="#2a1a6e" font-size="12">A∩B</text></svg>
+<p><b>P(A∪B) = P(A) + P(B) − P(A∩B)</b></p></div>
+<div class="card"><h3>⚖️ Lepas vs Bebas</h3><p><b>Saling lepas:</b> A∩B kosong, P(A∪B) = P(A)+P(B). Contoh dadu muncul 2 atau 5: {1/6}+{1/6} = {1/3}.</p><p><b>Saling bebas:</b> P(A∩B) = P(A)×P(B). Contoh koin Angka dan dadu 6: {1/2}×{1/6} = {1/12}.</p></div></div></div></section>
+
+<section class="pg" id="penerapan" data-bg="16" data-ch="1"><div class="in">
+<div class="ttl"><h2>Peluang di Kehidupan <em>Sehari-hari</em></h2></div>
+<div class="two"><div class="card"><h3>🎲 Permainan Dadu</h3><p>Peluang muncul mata 6 = {1/6}</p></div><div class="card"><h3>🪙 Pelemparan Koin</h3><p>Peluang muncul Angka = {1/2}</p></div><div class="card"><h3>🃏 Pengambilan Kartu</h3><p>Peluang kartu hati dari 52 kartu = {13/52} = {1/4}</p></div><div class="card"><h3>🔴 Bola Berwarna</h3><p>3 bola merah dari 10 bola, peluang merah = {3/10}</p></div><div class="card"><h3>🎟️ Undian</h3><p>Satu tiket dari 50 tiket, peluang menang = {1/50}</p></div></div></div></section>
+
+<section class="pg" id="video" data-bg="17" data-ch="0"><div class="in">
+<div class="ttl"><h2>Yuk, Tonton & Pahami <em>Materi!</em></h2></div>
+<div class="card"><a href="https://youtu.be/4j1IBo5Vshc" target="_blank" rel="noopener" style="text-decoration:none"><div style="aspect-ratio:16/9;border-radius:18px;background:linear-gradient(135deg,#1e1b6b,#7c3aed 60%,#ec4899);display:grid;place-items:center;color:#fff;text-align:center;box-shadow:0 10px 24px rgba(20,5,80,.4)"><div><div style="font-size:4rem">▶️</div><b>Ketuk untuk menonton di YouTube</b></div></div></a>
+<div class="row"><a class="btn y" href="https://youtu.be/4j1IBo5Vshc" target="_blank" rel="noopener" style="text-decoration:none">▶ BUKA VIDEO</a></div></div></div></section>
+
+
+<section class="pg" id="simulasi" data-bg="8" data-ch="0"><div class="in">
+<div class="ttl"><h2>Simulasi <em>Peluang</em></h2></div>
+<div class="two"><div class="card"><h3>🎲 Lempar Dadu</h3><div id="face">⚀</div><div class="bars" id="bars"></div><p id="info">Belum ada lemparan.</p>
+<div class="row"><button class="btn y" onclick="roll(1)">Lempar</button><button class="btn" onclick="roll(10)">×10</button><button class="btn" onclick="roll(100)">×100</button></div></div>
+<div class="card"><h3>🪙 Lempar Koin</h3><div id="coin">?</div><p id="cinfo">Belum ada lemparan.</p>
+<div class="row"><button class="btn y" onclick="flip(1)">Lempar</button><button class="btn" onclick="flip(10)">×10</button><button class="btn" onclick="flip(100)">×100</button><button class="btn" onclick="rst()">↺</button></div>
+<p><small>Makin banyak percobaan, frekuensi relatif makin mendekati peluang teoretis (dadu ≈ 0,17 per sisi; koin = 0,5).</small></p></div></div></div></section>
+
+<section class="pg" id="kuis" data-bg="9" data-ch="1"><div class="in">
+<div class="ttl"><h2 id="kt">Latihan <em>Soal</em></h2></div>
+<div class="card"><div class="hud"><span>🎮 Soal <b id="ql">1</b>/5</span><span>⭐ Skor <b id="sc">0</b></span></div>
+<h3 id="qt" style="color:var(--ink);font-size:1.15rem"></h3><div id="qo"></div></div></div></section>
+
+<section class="pg" id="ok" data-bg="10" data-ch="1"><div class="in fbk"><div class="ttl"><p class="big" style="color:#16a34a">HEBAT,<br>BENAR! 🎉</p></div>
+<div class="card" id="oke" style="max-width:520px;margin:0 auto 14px"></div>
+<div class="row" style="justify-content:center"><button class="btn y" onclick="nextQ()">LANJUT ➜</button></div></div></section>
+
+<section class="pg" id="no" data-bg="11" data-ch="0"><div class="in fbk"><div class="ttl"><p class="big" style="color:var(--p)">BELUM TEPAT,<br>AYO COBA LAGI!</p></div>
+<div class="card" id="noe" style="max-width:520px;margin:0 auto 14px">Pelajari lagi materinya, lalu coba lagi.</div>
+<div class="row" style="justify-content:center"><button class="btn" onclick="go('rumus')">📖 MATERI</button><button class="btn y" onclick="go('kuis')">↻ COBA LAGI</button></div></div></section>
+
+<section class="pg" id="hasil" data-bg="12" data-ch="1"><div class="in fbk"><div class="ttl"><h2>Hasil <em>Evaluasi</em></h2></div>
+<div class="card" style="max-width:520px;margin:auto"><div class="ring" id="rg"><div id="rs">0</div></div><p id="rm" style="font-weight:800"></p>
+<div class="row" style="justify-content:center"><button class="btn y" onclick="go('kuis');initQ(M)">↻ ULANGI</button><button class="btn" id="hev" onclick="go('kuis');initQ(1)">📋 EVALUASI</button><button class="btn" onclick="go('menu')">🏠 MENU</button></div></div></div></section>
+
+<section class="pg" id="rangkuman" data-bg="13" data-ch="0"><div class="in">
+<div class="ttl"><h2>Rangkuman <em>Rumus</em></h2></div>
+<div class="two"><div class="fm">P(A) = {n(A)/n(S)}<small>Peluang kejadian</small></div><div class="fm">Fh(A) = P(A) × n<small>Frekuensi harapan</small></div><div class="fm">P(Aᶜ) = 1 − P(A)<small>Komplemen</small></div><div class="fm" style="font-size:1.05rem">P(A∪B) = P(A)+P(B)−P(A∩B)<small>Gabungan; lepas: tanpa suku irisan</small></div><div class="fm">P(A∩B) = P(A)×P(B)<small>Saling bebas</small></div></div></div></section>
+
+<section class="pg" id="profil" data-bg="14" data-ch="1"><div class="in">
+<div class="ttl"><h2>Profil <em>Pengembang</em></h2></div>
+<div class="card"><p>Nama Mahasiswa: <span contenteditable>[isi nama]</span></p><p>NIM: <span contenteditable>[isi NIM]</span></p><p>Program Studi: <span contenteditable>[isi program studi]</span></p><p>Fakultas: <span contenteditable>[isi fakultas]</span></p><p>Universitas: <span contenteditable>[isi universitas]</span></p><small>Ketuk kotak kuning untuk mengisi.</small></div></div></section>
+
+<section class="pg" id="penutup" data-bg="15" data-ch="0"><div class="in cover">
+<div class="ttl"><p class="big" style="color:var(--p)">SELAMAT! 🎉</p></div>
+<div class="card"><b>KAMU TELAH MENYELESAIKAN PEMBELAJARAN MATERI PELUANG.</b><br>Terus belajar, berlatih, dan jangan takut mencoba!</div>
+<div class="row" style="justify-content:center"><button class="btn y" onclick="go('menu')">🏠 KEMBALI KE MENU</button></div></div></section>
+
+<nav><button class="btn" onclick="step(-1)">◀</button><button class="btn" onclick="go('menu')">☰ MENU</button><button class="btn y" onclick="step(1)">▶</button></nav>
+
+<script>
+var seq=['cover','menu','petunjuk','konsep','rumus','contoh','fh','majemuk','penerapan','video','simulasi','kuis','hasil','rangkuman','profil','penutup'],
+nm={cover:'Sampul',menu:'Menu',petunjuk:'Petunjuk',konsep:'Materi',rumus:'Rumus',contoh:'Contoh Soal',fh:'Frekuensi Harapan',majemuk:'Majemuk',penerapan:'Penerapan',video:'Video',simulasi:'Simulasi',kuis:'Kuis',ok:'Benar',no:'Coba Lagi',hasil:'Hasil',rangkuman:'Rangkuman',profil:'Profil',penutup:'Penutup'},cur='cover';
+function $(i){return document.getElementById(i)}
+document.querySelectorAll('.pg').forEach(function(s){s.innerHTML=s.innerHTML.replace(/\{([^{}\/]+)\/([^{}\/]+)\}/g,'<span class="fr"><i>$1</i><i>$2</i></span>')});
+var DP=[[],[0,0],[0,1,0,0,1],[1,0,1,0,1,1],[1,1,1,1,0,0],[1,1,1,0,1,1]];
+function die(n,s,r){var P={1:[[50,50]],2:[[28,28],[72,72]],3:[[28,28],[50,50],[72,72]],4:[[28,28],[72,28],[28,72],[72,72]],5:[[28,28],[72,28],[50,50],[28,72],[72,72]],6:[[28,24],[72,24],[28,50],[72,50],[28,76],[72,76]]}[n].map(function(p){return '<circle cx="'+p[0]+'" cy="'+p[1]+'" r="8" fill="#4c1d95"/>'}).join('');
+return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 100 100" style="transform:rotate('+r+'deg);filter:drop-shadow(0 10px 8px rgba(20,5,80,.45))"><defs><linearGradient id="dg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c4b5fd"/></linearGradient></defs><rect x="6" y="6" width="88" height="88" rx="20" fill="url(#dg)" stroke="#fff" stroke-width="3"/>'+P+'</svg>'}
+function coin(t,s){return '<svg width="'+s+'" height="'+s+'" viewBox="0 0 100 100" style="filter:drop-shadow(0 10px 8px rgba(20,5,80,.45))"><defs><radialGradient id="cg" cx=".3" cy=".3"><stop offset="0" stop-color="#fff7a8"/><stop offset="1" stop-color="#f59e0b"/></radialGradient></defs><circle cx="50" cy="50" r="46" fill="url(#cg)" stroke="#b45309" stroke-width="4"/><circle cx="50" cy="50" r="34" fill="none" stroke="#b45309" stroke-width="3" stroke-dasharray="4 3"/><text x="50" y="64" text-anchor="middle" font-size="40" font-weight="800" fill="#92400e" font-family="Poppins,sans-serif">'+t+'</text></svg>'}
+function card(su,L,s,r,c){return '<svg width="'+s+'" height="'+s*1.4+'" viewBox="0 0 70 98" style="transform:rotate('+r+'deg);filter:drop-shadow(0 10px 8px rgba(20,5,80,.45))"><rect x="3" y="3" width="64" height="92" rx="9" fill="#fff" stroke="#c4b5fd" stroke-width="3"/><text x="10" y="22" font-size="16" font-weight="800" fill="'+c+'" font-family="Poppins,sans-serif">'+L+'</text><text x="35" y="64" text-anchor="middle" font-size="40" fill="'+c+'">'+su+'</text></svg>'}
+function txt(t,s,c){return '<div style="font:800 '+s+'px Poppins,sans-serif;color:'+c+';opacity:.55;text-shadow:0 4px 10px rgba(0,0,0,.2)">'+t+'</div>'}
+function ch(p){var arm=p?'<path d="M92 118 Q96 96 70 86" stroke="#fff" stroke-width="13" fill="none" stroke-linecap="round"/><circle cx="68" cy="84" r="7" fill="#ffd9b8"/><circle cx="96" cy="14" r="12" fill="#fde047"/><text x="96" y="20" text-anchor="middle" font-size="16">💡</text>':'<path d="M92 118 Q112 98 106 74" stroke="#fff" stroke-width="13" fill="none" stroke-linecap="round"/><circle cx="106" cy="70" r="7" fill="#ffd9b8"/>';
+return '<svg viewBox="0 0 120 170" width="100%" style="filter:drop-shadow(0 12px 10px rgba(20,5,80,.4))"><ellipse cx="60" cy="52" rx="42" ry="44" fill="#1f1740"/><path d="M25 160Q28 100 60 98Q92 100 95 160Z" fill="#fff" stroke="#c4b5fd" stroke-width="2"/><path d="M50 98L60 120L70 98Z" fill="#7c3aed"/>'+arm+'<circle cx="60" cy="58" r="32" fill="#ffd9b8"/><path d="M28 48Q60 8 92 48Q60 34 28 48Z" fill="#1f1740"/><rect x="28" y="38" width="64" height="7" rx="3" fill="#2f5bff"/><circle cx="48" cy="60" r="4" fill="#222"/><circle cx="72" cy="60" r="4" fill="#222"/><circle cx="49.5" cy="58.5" r="1.4" fill="#fff"/><circle cx="73.5" cy="58.5" r="1.4" fill="#fff"/><path d="M50 72Q60 82 70 72" stroke="#c2410c" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="40" cy="70" r="5" fill="#f9a8d4" opacity=".7"/><circle cx="80" cy="70" r="5" fill="#f9a8d4" opacity=".7"/></svg>'}
+var G=['#2f5bff,#7c3aed','#7c3aed,#2f5bff','#ec4899,#7c3aed','#2f5bff,#a855f7','#6d28d9,#ec4899','#3b82f6,#8b5cf6','#4c1d95,#2f5bff','#a855f7,#f472b6','#1d4ed8,#6d28d9','#7c3aed,#db2777','#16a34a,#2f5bff','#7c3aed,#ef4444','#fbbf24,#a855f7','#2563eb,#c026d3','#6366f1,#ec4899','#7c3aed,#fde047','#0ea5e9,#7c3aed','#ec4899,#2f5bff'];
+var I=[[['d',6,6,10,70,-14],['c','A',84,8,70,0],['k','♠',70,52,80,12],['t','P(A)',8,58,60],['d',3,88,60,50,20],['c','G',44,6,52,0]],
+[['k','♥',6,12,70,-16],['d',5,84,12,64,14],['c','A',90,70,56,0],['t','1/2',64,68,70],['d',2,3,70,52,-20]],
+[['t','?',6,8,110],['d',4,86,8,66,-8],['c','G',76,64,64,0],['k','♦',4,62,70,10],['t','%',50,76,60]],
+[['d',1,86,10,60,20],['d',6,3,40,70,-12],['c','A',60,76,60,0],['t','S',70,10,90],['k','♣',90,56,70,-10]],
+[['t','n(A)',4,10,56],['d',5,84,8,70,10],['t','n(S)',6,70,56],['c','G',78,72,64,0],['k','♠',44,4,60,-12]],
+[['d',2,6,8,60,-10],['d',6,12,60,70,14],['k','♥',84,10,70,12],['c','A',88,64,58,0],['t','÷',46,76,70]],
+[['c','A',6,8,76,0],['c','G',14,62,60,0],['d',4,86,12,66,16],['t','×',60,74,80],['k','♦',80,58,70,-12]],
+[['t','∪',6,10,100],['t','∩',84,64,90],['d',3,86,8,60,-16],['c','G',6,64,60,0],['k','♣',60,8,60,8]],
+[['d',1,6,6,80,-18],['d',6,80,10,80,16],['d',3,70,66,60,-8],['c','A',10,66,70,0],['c','G',50,78,52,0]],
+[['t','?',84,6,110],['d',5,4,10,64,-12],['k','♠',4,64,76,-8],['c','A',88,68,64,0],['t','★',46,8,60]],
+[['t','★',8,10,90],['t','★',88,16,60],['d',6,86,60,64,12],['c','A',6,70,60,0],['k','♥',44,6,60,-10]],
+[['t','?',6,10,100],['d',2,86,8,60,16],['k','♦',88,60,70,10],['c','G',6,66,60,0],['t','…',50,70,80]],
+[['t','★',6,8,80],['d',6,84,8,70,-10],['c','A',8,64,70,0],['k','♠',86,60,70,12],['t','100',48,74,60]],
+[['t','P',6,8,100],['t','∑',86,12,80],['d',4,6,64,62,-12],['c','G',88,66,64,0],['k','♥',46,6,56,8]],
+[['d',3,6,10,66,-10],['c','A',86,10,60,0],['k','♣',6,66,70,-14],['t','ID',84,64,70]],
+[['t','★',8,8,80],['d',6,84,10,70,14],['c','A',4,64,70,0],['k','♦',88,60,72,-12],['t','🏆',46,8,60]],
+[['d',6,6,8,64,-12],['c','A',88,10,60,0],['k','♠',6,66,70,10],['d',2,86,64,56,14],['t','1/6',46,6,60]],
+[['t','▶',6,8,90],['d',3,86,10,64,12],['c','G',8,66,60,0],['k','♥',86,62,70,-10],['t','?',48,72,70]]];
+function build(){document.querySelectorAll('.pg').forEach(function(s){var i=+s.dataset.bg,g=G[i].split(','),h='<div class="bgl" style="background:radial-gradient(circle at 20% 15%,rgba(255,255,255,.28),transparent 40%),radial-gradient(circle at 85% 80%,rgba(249,168,212,.35),transparent 45%),linear-gradient('+(120+i*17)+'deg,'+g[0]+','+g[1]+')">';
+h+='<svg viewBox="0 0 400 120" preserveAspectRatio="none" style="left:0;bottom:0;width:100%;height:22%"><path d="M0 60Q100 10 200 55T400 40V120H0Z" fill="rgba(255,255,255,.18)"/><path d="M0 85Q120 40 220 80T400 70V120H0Z" fill="rgba(255,255,255,.2)"/></svg>';
+h+='<div style="left:'+(10+i*4%60)+'%;top:30%;width:120px;height:44px;border-radius:44px;background:rgba(255,255,255,.35)"></div>';
+I[i].forEach(function(o,k){var c=o[0],v=o[1],x=o[2],y=o[3],z=o[4],r=o[5],e;
+e=c=='d'?die(v,z,r):c=='c'?coin(v,z):c=='k'?card(v,{'♠':'A','♥':'K','♦':'Q','♣':'J'}[v],z,r,v=='♥'||v=='♦'?'#e11d48':'#4c1d95'):txt(v,z,'#fff');
+h+='<div class="fl" style="left:'+x+'%;top:'+y+'%;animation-delay:-'+(k*1.3)+'s">'+e+'</div>'});
+if(s.dataset.ch!='undefined'&&s.id!='penutup'||s.id=='penutup'){var big=s.id=='cover'||s.id=='penutup';h+='<div style="right:'+(big?'4':'1')+'%;bottom:96px;width:'+(big?'190':'110')+'px;opacity:'+(big?1:.95)+'">'+ch(+s.dataset.ch)+'</div>'}
+s.insertAdjacentHTML('afterbegin',h+'</div>')})}
+build();
+function go(id){cur=id;document.querySelectorAll('.pg').forEach(function(s){s.classList.toggle('on',s.id==id)});var k=seq.indexOf(id);if(k>=0){$('pb').style.width=((k+1)/seq.length*100)+'%';$('pc').textContent=(k+1)+'/'+seq.length}$('lab').textContent=nm[id];window.scrollTo(0,0);try{history.replaceState(null,'','#'+id)}catch(e){}}
+function step(d){var k=seq.indexOf(cur);if(k<0)k=seq.indexOf('kuis');go(seq[Math.max(0,Math.min(seq.length-1,k+d))])}
+var cnt,tot,cc,ct;
+function rst(){cnt=[0,0,0,0,0,0];tot=0;cc=[0,0];ct=0;draw();$('face').textContent='⚀';$('coin').textContent='?';$('cinfo').textContent='Belum ada lemparan.'}
+function draw(){var m=Math.max.apply(null,cnt)||1,h='';for(var i=0;i<6;i++)h+='<div><u style="height:'+(cnt[i]/m*70)+'px"></u>'+(i+1)+'</div>';$('bars').innerHTML=h;
+$('info').textContent=tot?('Total '+tot+' lemparan. Mata 6 muncul '+cnt[5]+'× (frek. relatif '+(cnt[5]/tot).toFixed(2)+'; teori 0,17)'):'Belum ada lemparan.'}
+function roll(n){for(var i=0;i<n;i++){var r=Math.floor(Math.random()*6);cnt[r]++;tot++;$('face').textContent='⚀⚁⚂⚃⚄⚅'[r]}draw()}
+function flip(n){var l=0;for(var i=0;i<n;i++){l=Math.random()<.5?0:1;cc[l]++;ct++}$('coin').textContent=l?'G':'A';$('cinfo').textContent='Total '+ct+': Angka '+cc[0]+', Gambar '+cc[1]+' (frek. relatif Angka '+(cc[0]/ct).toFixed(2)+'; teori 0,50)'}
+rst();
+var L=[['Sebuah dadu dilempar sekali. Peluang muncul mata dadu kelipatan 3?',['1/6','1/3','1/2','2/3'],1,'Kelipatan 3 = {3,6}, jadi 2/6 = 1/3.'],
+['Dua koin dilempar bersamaan. Peluang muncul paling sedikit satu Angka?',['1/4','1/2','3/4','1'],2,'S = {AA,AG,GA,GG}; hanya GG tanpa Angka, jadi 3/4.'],
+['Kotak berisi 5 bola merah dan 3 bola biru. Satu bola diambil. Peluang biru?',['3/8','3/5','5/8','1/3'],0,'n(biru) = 3, n(S) = 8, jadi 3/8.'],
+['Dadu dilempar 120 kali. Frekuensi harapan muncul bilangan prima?',['20','40','60','80'],2,'Prima = {2,3,5}, P = 1/2, Fh = 1/2 × 120 = 60.'],
+['Dari 52 kartu bridge diambil satu. Peluang terambil As atau King?',['1/13','2/13','4/13','8/13'],1,'Saling lepas: 4/52 + 4/52 = 8/52 = 2/13.']];
+var E=[['Dua dadu dilempar bersamaan. Peluang jumlah mata kedua dadu 8?',['1/6','5/36','1/9','7/36'],1,'Pasangan: (2,6),(3,5),(4,4),(5,3),(6,2) = 5 dari 36, jadi 5/36.'],
+['Peluang hari ini hujan adalah 0,35. Peluang tidak hujan?',['0,35','0,55','0,65','0,75'],2,'P(Aᶜ) = 1 − 0,35 = 0,65.'],
+['A dan B saling bebas, P(A) = 0,4 dan P(B) = 0,5. Nilai P(A∩B)?',['0,9','0,2','0,1','0,45'],1,'Saling bebas: 0,4 × 0,5 = 0,2.'],
+['Tiga koin dilempar bersamaan. Peluang muncul tepat dua Angka?',['1/8','3/8','1/2','3/4'],1,'AAG, AGA, GAA = 3 dari 8, jadi 3/8.'],
+['Kantong berisi 4 bola merah dan 6 bola putih. Diambil 2 bola sekaligus. Peluang keduanya merah?',['2/15','4/25','1/5','2/5'],0,'C(4,2)/C(10,2) = 6/45 = 2/15.']],Q=L,M=0,qi,sc,tr;
+function initQ(m){M=m||0;Q=M?E:L;qi=0;sc=0;tr=0;$('kt').innerHTML=M?'Evaluasi <em>Akhir</em>':'Latihan <em>Soal</em>';showQ()}
+function showQ(){var q=Q[qi];$('ql').textContent=qi+1;$('sc').textContent=sc;$('qt').textContent=q[0];$('qo').innerHTML='';
+q[1].forEach(function(o,i){var b=document.createElement('button');b.className='opt';b.textContent=String.fromCharCode(65+i)+'. '+o;b.onclick=function(){pick(i)};$('qo').appendChild(b)})}
+function pick(i){var q=Q[qi];if(i==q[2]){if(!tr)sc+=20;$('oke').textContent=q[3];$('ok').querySelector('.btn').textContent=qi==4?'LIHAT SKOR ➜':'LANJUT ➜';go('ok')}else{tr++;$('noe').textContent='Petunjuk: pikirkan n(A) dan n(S) dengan teliti.';go('no')}}
+function nextQ(){if(qi<4){qi++;tr=0;showQ();go('kuis')}else{$('rg').style.setProperty('--v',sc);$('rs').textContent=sc;$('rm').textContent=(sc>=80?'Luar biasa, kamu jagoan peluang! 🏅':sc>=60?'Bagus! Sedikit lagi sempurna. 👍':'Jangan menyerah, ulangi dan pelajari materinya lagi. 💪');$('hev').style.display=M?'none':'';go('hasil')}}
+initQ();
+var h=location.hash.slice(1);if(h&&nm[h]&&h!='ok'&&h!='no')go(h);
+</script></body></html>
